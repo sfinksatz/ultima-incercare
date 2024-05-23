@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Incercare de proiect</title>
+        <link rel="stylesheet" href="prima-chestie.css">
+    </head>
+    <body class="corp">        
+        <img class="game" src="game.webp">
+        <p class="made">Made by the one and only RAUL</p>
+
+        <div>
+            <img class="piatra" onclick="
+            pickcreatorNumber ();
+            if (rezultat === 'hartie') {
+            rezultatFinal = 'Ai pierdut, ce naspa!';
+            } else if (rezultat === 'foarfece') {
+            rezultatFinal = 'Ai castigat,esti prea smecher!';
+            } else if (rezultat === 'piatra') {
+            rezultatFinal = 'Remiza, gandesti la fel ca si calculatorul';
+            }
+            alert (`Ai ales piatra, calculatorul a ales ${rezultat}.${rezultatFinal}`);
+            " src="rock_fata.webp">
+        </div>
+
+        <div>
+            <img class="foarfece" onclick="
+            pickcreatorNumber ();
+            if (rezultat === 'hartie') {
+            rezultatFinal = 'Ai castigat,esti prea smecher!';
+            } else if (rezultat === 'foarfece') {
+            rezultatFinal = 'Remiza, gandesti la fel ca si calculatorul';
+            } else if (rezultat === 'piatra') {
+            rezultatFinal = 'Ai pierdut, ce naspa!';
+            }
+            alert (`Ai ales forfece, calculatorul a ales ${rezultat}.${rezultatFinal}`);
+            " src="scissors_fata.png">
+        </div>
+        
+        <div>
+                <img class="hartie" onclick="
+              pickcreatorNumber ();
+        if (rezultat === 'hartie') {
+            rezultatFinal = 'Remiza, gandesti la fel ca si calculatorul';
+        } else if (rezultat === 'foarfece') {
+            rezultatFinal = 'Ai pierdut, ce naspa!';
+        } else if (rezultat === 'piatra') {
+            rezultatFinal = 'Ai castigat,esti prea smecher!';
+        }
+        alert (`Ai ales hartie, calculatorul a ales ${rezultat}.${rezultatFinal}`);
+        " src="paper_fata.webp">
+        </div>
+
+        <script>   
+          let rezultat ='' ;        
+
+        function pickcreatorNumber () {
+            let creatorNumber = Math.random();
+        if (creatorNumber >= 0 && creatorNumber <= 1/3) {
+            rezultat = 'hartie';            
+        } else if (creatorNumber >= 1/3 && creatorNumber <= 2/3) {
+            rezultat = 'foarfece';
+        } else if (creatorNumber >= 2/3 && creatorNumber <= 1) {
+            rezultat = 'piatra';
+        } 
+        };                             
+        </script>
+    </body>
+</html>
